@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "TT Lakes Regular", sans-serif;
+	font-style: normal;
+	list-style-type: none;
+	list-style: none;
+	text-decoration: none;
+}
+body {
+	max-width: 1440px;
+	margin: 0 auto;
+	background-color: $back_bezh;
+
+
+	
+	button {
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+	main {
+		min-width: 320px;
+		max-width: 1120px;
+
+			@media (min-width: $screen-xl) {
+			margin: 0 0 0 320px; 
+		}
+	}
+
+	.section__title {
+		text-transform: uppercase;
+		color: $text_color_ser;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+		padding: 25px 16px; 
+		border-top: 2px solid $border_top_color;
+	}
+
+	.btn {
+		&:hover {
+			transform: translateY(1px) translateX(-1px);
+			transition: 0.15s;
+		}
+		&:active {
+			transform: translateY(-1px) translateX(1px);
+			transition: 0.15s;
+		}
+	}
+}
+
+.transparent-back-BM {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	opacity: 0.90;
+	z-index: 3;
+}
+
+.transparent-back-FB {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	opacity: 0.90;
+	z-index: 5;
+}
+
+.feedback {
+	display: none;
+}
+
+.feedback-call {
+	display: none;
+}
+
+.content__button--img.rotate {
+	transform: rotate(180deg);
+}
+
+
+.slide-up {
+	animation: slideUp 0.5s ease-in-out; /* Время анимации и эффект */
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px); 
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0); 
+	}
+}
+
+.open-menu {
+	animation: openMenu 0.3s ease-in-out;
+}
+
+@keyframes openMenu {
+	from {
+		opacity: 0;
+
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.menu-back__open {
+	animation: menuBackOpen 0.8s ease-in-out;
+}
+
+@keyframes menuBackOpen {
+	from {
+		opacity: 0;
+
+	}
+	to {
+		opacity: 0.90;
+	}
+}
+

@@ -1,0 +1,140 @@
+.burger-menu {
+	position: fixed;
+	background-color: $back_wite;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scrollbar-width: none;
+	box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+	z-index: 4;
+}
+
+
+.menubar {
+	display: flex;
+	justify-content: space-between;
+	min-width: 240px;
+	max-width: 320px;
+	padding-bottom: 10px;
+
+
+	&__left {
+		display: flex;
+		gap: 10px;
+		margin-left: 24px;
+		padding-top: 18px;
+	}
+
+	&__close {
+		padding-top: 5px;
+	}
+
+	&__right {
+		padding-top: 23px;
+		padding-right: 24px;
+	}
+}
+
+.nav {
+	width: 320px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color: $textColor_black;
+	padding-top: 5%;
+
+	
+	&__list li {
+		padding: 12px 24px;
+		&:first-child {
+			background: (url(img/highlight_aside.svg) no-repeat left);
+			.nav__link {
+				color: $text_color_ser;
+			}
+		}
+	}
+
+	&__link {
+		color: $textColor_black;
+		&:hover {
+			color: $text_color_ser;
+		}
+	}
+}
+
+.button-contact {
+	display: flex;
+	gap: 16px;
+	margin-left: 24px;
+	margin-top: 10%;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	font-weight: 500;
+	padding: 16px 24px 0;
+
+	&__email {
+		font-family: "TT Lakes" sans-serif;
+		font-size: 16px;
+		font-style: normal;
+		color: $textColor_black;
+	}
+
+	&__phone {
+		font-family: "TT Lakes" sans-serif;
+		font-size: 24px;
+		font-weight: 700;
+		font-style: normal;
+		color: $textColor_black;
+		line-height: 32px;
+		padding-top: 20px;
+	}
+}
+
+.lang {
+	display: flex;
+	gap: 7px;
+	margin-left: 24px;
+	padding-top: 10%;
+
+	&__button {
+		font-weight: 500;
+		&:hover {
+			color: $text_color_ser;
+		}
+	}
+
+	&__button:first-child {
+		color: $text_color_ser;
+	}
+}
+
+
+@media (max-width: $screen-xl) {
+	.burger-menu {
+		display: none;
+	}
+}
+
+@media (min-width: $screen-xl) {
+	.burger-menu {
+		display: block !important;
+		position: fixed;
+		box-shadow: none;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		scrollbar-width: none;
+	}
+	.menubar {
+		&__close
+		{
+			display: none;
+		}
+	}
+}
+
+
+
+

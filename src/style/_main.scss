@@ -1,0 +1,251 @@
+.services {
+	&__title {
+		position: relative;
+		margin: 0;
+		color: $textColor_black;
+		font-family: "TT Lakes" sans-serif;
+		font-size: 28px;
+		font-weight: 900;
+		line-height: 40px;
+		letter-spacing: -0.6px;
+		padding: 24px 16px 0 16px;
+		&::before {
+			content: "";
+			position: absolute;
+			height: 40px;
+			width: 4px;
+			left: 0;
+			background-color: $highlight_color;
+			border-radius: 0px 10px 10px 0px;
+		}
+	}
+
+	&__application {
+		display: none;
+	}
+
+	&__navigation {
+		margin: 0 16px 0 16px;
+		&--item {
+			height: 40px;
+			border: 2px solid transparent;
+			white-space: nowrap;
+			&:first-child {
+				background-color: $back_bezh;
+				border-radius: 6px;
+				border-color: $border_color;
+			}
+		}
+
+		&--href {
+			display: inline-block;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 24px;
+			letter-spacing: -0.2px;
+			color: $text_color_ser;
+			vertical-align: middle;
+			background: none;
+			border: none;
+			cursor: pointer;
+			padding: 8px 16.67px 8px 16.67px;
+			margin: 0;
+			flex-shrink: 0;
+			white-space: nowrap;
+			&:hover {
+				color: $textColor_black;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__type {
+		display: flex;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		padding: 0;
+		margin: 0;
+	
+	&::-webkit-scrollbar {
+		width: 0px;
+		height: 0px;
+	  }
+	
+	  &::-webkit-scrollbar-track {
+		background: transparent;
+	  }
+	
+	  &::-webkit-scrollbar-thumb {
+		background: transparent;
+	  }
+	
+	  & {
+		scrollbar-width: thin;
+		scrollbar-color: transparent transparent;
+	  }
+	}
+
+	@media (min-width: $screen-xl) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 15px;
+			padding-bottom: 8px;
+
+			&__title {
+				margin-bottom: 30px;
+				height: 40px;
+			}
+
+			&__application {
+				display: flex;
+				width: auto;
+				height: 40px;
+				margin-right: 30px;
+				margin-top: 25px;
+				gap: 42px;
+			}
+
+			&__type {
+				flex-wrap: wrap;
+				overflow-x: hidden;
+			}
+
+			&__repair,
+			&__checkstatus {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+
+			&__repair:hover{
+				transform: translateY(1px);
+				transition: 0.1s;
+				color: $text_color_ser;
+			}
+
+			&__checkstatus:hover{
+				transform: translateY(1px);
+				transition: 0.1s;
+				color: $text_color_ser;
+			}
+			&--3 {
+				display: flex;
+				padding-top: 20px;
+			}
+			&__img {
+				width: 532px;
+				height: 307px;
+			}
+		}
+}
+
+
+
+.content {
+	display: flex;
+	flex-direction: column;
+	margin-top: 24px;
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		margin: 0px 16px 0 16px;
+
+		&--1,
+		&--2,
+		&--3,
+		&--4{
+			color: $textColor_black;
+			font-family: "TT Lakes" sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 18px;
+			letter-spacing: 0.2px;
+			margin: 0;
+		}
+		&--2, 
+		&--3,
+		&--4 {
+			display: none;
+			padding-top: 20px;
+		}
+	}
+
+	&__button {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 140px;
+		margin-left: 10px;
+
+		&:hover {
+			transform: translateY(1px);
+			transition: 0.1s;
+		}
+
+
+		&--img.rotate {
+			width: 24px;
+			height: 24px;
+			flex-shrink: 0;
+			margin: 16px 8px 12px 0 ;
+			transition: 0.5s;
+		}
+
+		&--text {
+			color: $textColor_black;
+			font-family: "TT Lakes" sans-serif;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 24px;
+			letter-spacing: -0.2px;
+			background: none;
+			border: none;
+			margin: 16px 0 10px 0;
+			cursor: pointer;
+			&:hover {
+				color: $text_color_ser;
+			}
+		}
+	}
+
+	&__img {
+		display: flex;
+		align-self: center;
+		padding-bottom: 20px;
+	}
+
+	@media (min-width: $screen-md) {
+			display: flex;
+			flex-direction:row; 
+		
+			&__text--2 {
+				display: flex;
+				padding-top: 20px;
+			}
+			
+			&__img{
+				width: 360px;
+				height: 230px;
+				margin-top: 0;
+				margin-bottom: auto;
+			}
+		}
+		@media (min-width: $screen-xl) {
+			&__text--2 {
+				display: none;
+			}
+
+			&__text--3 {
+				display: flex;
+				padding-top: 20px;
+			}
+		}
+
+		&__img{
+			margin-right: 10px;
+		}
+		}

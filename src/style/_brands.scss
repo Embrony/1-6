@@ -1,0 +1,117 @@
+.brands {
+	position: relative;
+	min-width: 320px;
+	min-height: 180px;
+	
+	&-list {
+		margin-top: 20px;
+		margin-left: 10px;
+		margin-bottom: 15px;
+	}
+
+	&__item {
+		position: relative;
+		background-color:$back_wite;
+		width: 240px;
+		height: 72px;
+		border-radius: 5px;
+	}
+
+	&__button {
+		position: relative;
+		background-color:$back_wite;
+		width: 240px;
+		height: 72px;
+		border-radius: 10px;
+		&::before {
+			content: " ";
+			position: absolute;
+			background: url(img/go.svg);
+			background-repeat: no-repeat;
+			padding: 20px;
+			top: 16px;
+			left: 168px;
+		}
+		&:hover {
+			background: linear-gradient(rgb(255,255,255), rgb(240,240,240));
+			border: 0.5px solid $text_color_ser;
+			transition: 0.5s;
+		}
+		&:active {
+			transform: scale(0.95);
+			box-shadow: 30px 4px 25px rgba(255, 0, 130, 0.2);
+		}
+	}
+
+	&__img {
+		display: flex;
+		padding-left: 16px;
+		&:active {
+			transform: translateY(1px);
+			transition: 0.1s;
+		}
+	}
+
+	&__show-button {
+		display: none;
+	}
+
+	@media (min-width: $screen-md) {
+		&__title {
+			padding: 30px 24px; 
+		}
+
+		&-list {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			justify-items: center;
+			gap: 16px;
+			margin-top: 15px;
+		}
+
+		&__show-button {
+			display: flex;
+			width: 134px;
+			height: 24px;
+			margin-left: 10px;
+			margin-top: 24px;
+			padding-bottom: 60px;
+			&:hover {
+				transform: translateY(1px);
+				transition: 0.1s;
+			}
+		}
+
+		&__button--text {
+			color: $textColor_black;
+			font-family: "TT Lakes" sans-serif;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 24px;
+			letter-spacing: -0.2px;
+			background: none;
+			border: none;
+			cursor: pointer;
+			&:hover {
+				color: $text_color_ser;
+			}
+		}
+
+		&-7, &-8, &-9, &-10, &-11 {
+			display: none;
+		}
+	}
+
+	@media (min-width: $screen-xl) {
+		&-list {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 16px 15px;
+		}
+
+		&-7, &-8 {
+			display: block;
+		}
+	}
+}
