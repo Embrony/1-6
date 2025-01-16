@@ -21,8 +21,7 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		clean: true,
 		filename: '[name].[contenthash].js',
-		assetModuleFilename: 'assets/[name][ext]',
-		publicPath: process.env.NODE_ENV === 'production' ? '/1-6/' : '/'
+		assetModuleFilename: 'assets/[name][ext]'
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
